@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexG Mobiles - Launching Soon</title>
+  <meta name="description" content="NexG Mobiles - Launching Soon. Website Under Construction.">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Video background: fixed and covers ALL screen sizes perfectly */
+  .bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    filter: brightness(0.35);
+  }
+
+  /* Overlay for readability */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: -1;
+  }
+
+  /* Page content */
+  .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 3rem 1rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease forwards;
+  }
+
+  header img {
+    width: auto;
+    max-width: 80vw;
+    height: auto;
+    /* margin-bottom: 2rem; */
+    animation: fadeIn 2s ease forwards;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 700px;
+    width: 100%;
+    animation: fadeInUp 2s ease forwards;
+  }
+
+  .launching-soon {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 0.4rem;
+    margin-top: -150px;
+  }
+
+  .launching-soon::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 0.5rem auto 0;
+    background-color: #c40000;
+    animation: underlineExpand 2s ease forwards;
+  }
+
+  .under-construction {
+    font-size: 1.5rem;
+    color: #ccc;
+    line-height: 1.4;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  footer {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #888;
+    animation: fadeIn 2s ease forwards;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes underlineExpand {
+    from { width: 0; }
+    to { width: 80px; }
+  }
+
+  /* --- Responsive Breakpoints --- */
+  @media (max-width: 1024px) {
+    header img {
+      width: auto;
+      height: auto;
+      /* margin-bottom: 1.8rem; */
+    }
+
+    .launching-soon {
+      font-size: 2.5rem;
+      letter-spacing: 1.5px;
+      margin-top: -120px;
+    }
+
+    .under-construction {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      padding: 2rem 1rem;
+    }
+
+    header img {
+      width: auto;
+      height: auto;
+      /* margin-bottom: 1.5rem; */
+    }
+
+    .launching-soon {
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      margin-top: -50px;
+    }
+
+    .under-construction {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content {
+      padding: 1.5rem 0.8rem;
+    }
+
+    header img {
+      width: 150px;
+      /* margin-bottom: 1.2rem; */
+    }
+
+    .launching-soon {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+
+    .under-construction {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="img/xlarge_2x.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+  <div class="content">
+    <header>
+      <img src="img/nexglogo-removebg-preview.png" alt="NexG Mobiles Logo">
+    </header>
+    <main>
+      <div class="launching-soon">LAUNCHING SOON</div>
+      <div class="under-construction">Website Under Construction</div>
+    </main>
+    <footer>&copy; 2025 NexG Mobiles. All rights reserved.</footer>
+  </div>
+</body>
+</html>
